@@ -9,8 +9,6 @@
   "author": "Flizzyclone/Flizzy#6123",
   "license": "ISC",
   "dependencies": {
-    "data-store": "^4.0.3",
-    "delay": "^4.4.0",
     "discord.js": "^12.4.1",
     "fs": "0.0.1-security"
   }
