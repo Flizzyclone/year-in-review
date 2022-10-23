@@ -53,6 +53,10 @@ const monthWeekDay = [
               horizontal:false
             }
           },
+          grid: {
+            borderColor: '#818386',
+            strokeDashArray: 20,
+          },
           xaxis: {
               categories: toplineData.months.labels,
               labels: {
@@ -432,13 +436,15 @@ const monthWeekDay = [
   
       return (
         <div>
-        <h1 id='bigSectionTitleHeader'>Overall Activity in Messages Bar Graph</h1>
-        <div id='activityGraph'>
-          <div id='actGraphControls'>
-            <Select placeholder={'Month'} isSearchable={false} onChange={this.changeTimeframe} options={monthWeekDay} styles={dropdownStyles}/>
-            <Select placeholder={'Vertical'} isSearchable={false} onChange={this.changeOrientation} options={vertHoriz} styles={dropdownStyles}/>
-          </div> 
-            <Chart options={this.state.options} series={this.state.series} type="bar" width="96%" height="90%" />
+        <h1 class='bigSectionTitleHeader'>Overall Activity in Messages Bar Graph</h1>
+        <div class="lineGraphWrap greenGraphWrap">
+          <div class='activityGraph'>
+            <div id='actGraphControls'>
+              <Select placeholder={'Month'} isSearchable={false} onChange={this.changeTimeframe} options={monthWeekDay} styles={dropdownStyles}/>
+              <Select placeholder={'Vertical'} isSearchable={false} onChange={this.changeOrientation} options={vertHoriz} styles={dropdownStyles}/>
+            </div> 
+              <Chart options={this.state.options} series={this.state.series} type="bar" width="96%" height="90%" />
+            </div>
           </div>
         </div>
       );

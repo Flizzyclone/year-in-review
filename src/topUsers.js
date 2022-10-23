@@ -133,8 +133,10 @@ class AllTogether extends Component {
 function TopUsers() {
     return (
       <div>
-        <h1 id='bigSectionTitleHeader'>Top 100 Users</h1>
-        <AllTogether></AllTogether>
+        <h1 class='bigSectionTitleHeader'>Top 100 Users</h1>
+        <div class="orderedDivWrap yellowGraphWrap">
+          <AllTogether></AllTogether>
+        </div>
       </div>
     );
 }

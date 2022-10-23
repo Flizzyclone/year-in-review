@@ -37,6 +37,10 @@ const monthWeekDay = [
                   }
                 }
             },
+            grid: {
+              borderColor: '#818386',
+              strokeDashArray: 20,
+            },
             xaxis: {
                 categories: toplineData.months.labels,
                 labels: {
@@ -181,12 +185,14 @@ const monthWeekDay = [
     render() {
   
       return (
-        <div id='activityGraph'>
-          <div id='actGraphControls'>
-            <Select placeholder={'Month'} isSearchable={false} onChange={this.changeTimeframe} options={monthWeekDay} styles={dropdownStyles}/>
-            <Select placeholder={'Sharp'} isSearchable={false} onChange={this.changeCurve} options={sharpCurvy} styles={dropdownStyles}/>
-          </div> 
-          <Chart options={this.state.options} series={this.state.series} type="line" width="100%" height="90%" />
+        <div class="lineGraphWrap redGraphWrap">
+          <div class='activityGraph'>
+            <div id='actGraphControls'>
+              <Select placeholder={'Month'} isSearchable={false} onChange={this.changeTimeframe} options={monthWeekDay} styles={dropdownStyles}/>
+              <Select placeholder={'Sharp'} isSearchable={false} onChange={this.changeCurve} options={sharpCurvy} styles={dropdownStyles}/>
+            </div> 
+            <Chart options={this.state.options} series={this.state.series} type="line" width="100%" height="90%" />
+          </div>
         </div>
       );
     }

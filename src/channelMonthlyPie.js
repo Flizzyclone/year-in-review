@@ -156,13 +156,15 @@ class ChannelPieGraph extends Component {
 
     return (
       <div>
-        <h1 id='bigSectionTitleHeader'>Monthly Messages in Channel</h1>
-        <div id='orderedDiv'>
-          <div id='actGraphControls'>
-            <Select placeholder={listData[0]} onChange={this.handleChange} options={users} styles={dropdownUserStyles}/>
-          </div> 
-          <div className='pieDiv'>
-            <Chart options={this.state.options} series={this.state.series} type="pie" width="100%" height="100%" />
+        <h1 class='bigSectionTitleHeader'>Monthly Messages in Channel</h1>
+        <div class="orderedDivWrap orangeGraphWrap">
+          <div id='orderedDiv'>
+            <div id='actGraphControls'>
+              <Select placeholder={listData[0]} onChange={this.handleChange} options={users} styles={dropdownUserStyles}/>
+            </div> 
+            <div className='pieDiv'>
+              <Chart options={this.state.options} series={this.state.series} type="pie" width="100%" height="100%" />
+            </div>
           </div>
         </div>
       </div>

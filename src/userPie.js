@@ -138,14 +138,16 @@ class UserPieGraph extends Component {
 
     return (
       <div>
-        <h1 id='bigSectionTitleHeader'>Top 100 Users Pie Chart</h1>
-        <div id='orderedDiv'>
-        <div id='actGraphControls'>
-          <Select placeholder={'2020'} onChange={this.handleChange} isSearchable={false} options={groupedOptions} styles={dropdownStyles}/>
-        </div> 
-        <div className='pieDiv'>
-          <Chart options={this.state.options} series={this.state.series} type="pie" width="100%" height="100%" />
-        </div>
+        <h1 class='bigSectionTitleHeader'>Top 100 Users Pie Chart</h1>
+        <div class="orderedDivWrap purpleGraphWrap">
+          <div id='orderedDiv'>
+            <div id='actGraphControls'>
+              <Select placeholder={'2020'} onChange={this.handleChange} isSearchable={false} options={groupedOptions} styles={dropdownStyles}/>
+            </div> 
+            <div className='pieDiv'>
+              <Chart options={this.state.options} series={this.state.series} type="pie" width="100%" height="100%" />
+            </div>
+          </div>
         </div>
       </div>
     );

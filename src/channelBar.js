@@ -94,6 +94,10 @@ class ChannelBarGraph extends Component {
               }
             }
           },
+          grid: {
+            borderColor: '#818386',
+            strokeDashArray: 20,
+          },
           xaxis: {
               categories: months,
               labels: {
@@ -216,13 +220,15 @@ class ChannelBarGraph extends Component {
 
     return (
       <div>
-        <h1 id='bigSectionTitleHeader'>Top Channels Bar Graph</h1>
-        <div id='activityGraph'>
-          <div id='actGraphControls'>
-            <Select placeholder={listData[0]} onChange={this.changeChannel} options={users} styles={dropdownUserStyles}/>
-            <Select placeholder={'Vertical'} isSearchable={false} onChange={this.changeOrientation} options={vertHoriz} styles={dropdownStyles}/>
-          </div> 
-          <Chart options={this.state.options} series={this.state.series} type="bar" width="96%" height="90%" />
+        <h1 class='bigSectionTitleHeader'>Top Channels Bar Graph</h1>
+        <div class="lineGraphWrap purpleGraphWrap">
+          <div class='activityGraph'>
+            <div id='actGraphControls'>
+              <Select placeholder={listData[0]} onChange={this.changeChannel} options={users} styles={dropdownUserStyles}/>
+              <Select placeholder={'Vertical'} isSearchable={false} onChange={this.changeOrientation} options={vertHoriz} styles={dropdownStyles}/>
+            </div> 
+            <Chart options={this.state.options} series={this.state.series} type="bar" width="96%" height="90%" />
+          </div>
         </div>
       </div>
     );

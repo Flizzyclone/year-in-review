@@ -90,6 +90,10 @@ class UserLineGraph extends Component {
                 }
               }
           },
+          grid: {
+            borderColor: '#818386',
+            strokeDashArray: 20,
+          },
           xaxis: {
               categories: months,
               labels: {
@@ -194,13 +198,15 @@ class UserLineGraph extends Component {
 
     return (
       <div>
-        <h1 id='bigSectionTitleHeader'>Top Users Line Graph</h1>
-        <div id='activityGraph'>
-          <div id='actGraphControls'>
-          <Select placeholder={listData[0]} onChange={this.changeUser} options={users} styles={dropdownUserStyles}/>
-            <Select placeholder={'Sharp'} onChange={this.changeCurve} isSearchable={false} options={sharpCurvy} styles={dropdownStyles}/>
-          </div> 
-          <Chart options={this.state.options} series={this.state.series} type="line" width="96%" height="90%" />
+        <h1 class='bigSectionTitleHeader'>Top Users Line Graph</h1>
+        <div class="lineGraphWrap greenGraphWrap">
+          <div class='activityGraph'>
+            <div id='actGraphControls'>
+            <Select placeholder={listData[0]} onChange={this.changeUser} options={users} styles={dropdownUserStyles}/>
+              <Select placeholder={'Sharp'} onChange={this.changeCurve} isSearchable={false} options={sharpCurvy} styles={dropdownStyles}/>
+            </div> 
+            <Chart options={this.state.options} series={this.state.series} type="line" width="96%" height="90%" />
+          </div>
         </div>
       </div>
     );

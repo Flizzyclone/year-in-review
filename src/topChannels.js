@@ -120,8 +120,10 @@ class AllTogether extends Component {
 function TopChannels() {
     return (
       <div>
-        <h1 id='bigSectionTitleHeader'>Top Channels</h1>
+        <h1 class='bigSectionTitleHeader'>Top Channels</h1>
+        <div class="orderedDivWrap orangeGraphWrap">
         <AllTogether></AllTogether>
+        </div>
       </div>
     );
 }

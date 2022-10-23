@@ -138,13 +138,15 @@ class ChannelPieGraph extends Component {
 
     return (
       <div>
-        <h1 id='bigSectionTitleHeader'>Top Channels Pie Chart</h1>
-        <div id='orderedDiv'>
-          <div id='actGraphControls'>
-            <Select value={this.timeRange} placeholder={'2020'} onChange={this.handleChange} isSearchable={false} options={groupedOptions} styles={dropdownStyles}/>
-          </div> 
-          <div className='pieDiv'>
-            <Chart options={this.state.options} series={this.state.series} type="pie" width="100%" height="100%" />
+        <h1 class='bigSectionTitleHeader'>Top Channels Pie Chart</h1>
+          <div class="orderedDivWrap redGraphWrap">
+          <div id='orderedDiv'>
+            <div id='actGraphControls'>
+              <Select value={this.timeRange} placeholder={'2020'} onChange={this.handleChange} isSearchable={false} options={groupedOptions} styles={dropdownStyles}/>
+            </div> 
+            <div className='pieDiv'>
+              <Chart options={this.state.options} series={this.state.series} type="pie" width="100%" height="100%" />
+            </div>
           </div>
         </div>
       </div>
